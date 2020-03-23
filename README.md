@@ -50,9 +50,9 @@ La transformación inversa es trivial.
 
 Finalmente, la distancia entre dos colores en YCbCr está definida por:
 
-![Distancia YCC](https://latex.codecogs.com/gif.latex?d%5E2%20%28j%2Ck%29%3D%28Cb%28j%2Ck%29-Cb_%7Bref%7D%20%28j%2Ck%29%29%5E2&plus;%28Cr%28j%2Ck%29-Cr_%7Bref%7D%20%28j%2Ck%29%29%5E2)
+![Distancia YCC](https://latex.codecogs.com/gif.latex?d%5E2%28j%2Ck%29%20%3D%20%28Cb%28j%2Ck%29%20-%20Cb_%7Bref%7D%28j%2Ck%29%29%5E2%20&plus;%20%28Cr%28j%2Ck%29%20-%20Cr_%7Bref%7D%28j%2Ck%29%29%5E2)
 
-__*Todas estás ecuaciones requieren que sean adaptadas al rango rgb 0-255 que utiliza Processing*__
+ > __*Todas estás ecuaciones requieren que sean adaptadas al rango rgb 0-255 que utiliza Processing*__
 
 ##### Distancia entre colores en el espacio de color HSV
 
@@ -65,7 +65,7 @@ La distancia, entre matices de dos colores, por tanto viene definida por:
 
 La distancia entre saturaciones, al no ser circular, se calcula como:
 
-![Distancia saturation](https://latex.codecogs.com/gif.latex?dist_%7Bsaturation%7D%20%3D%20%7Csaturation_%7Bcolor1%7D%20-%20saturation_%7Bcolor2%7D%7C)
+![Distancia saturation](https://latex.codecogs.com/gif.latex?dist_%7Bsaturation%7D%20%3D%20%7Csaturation_%7Bcolor_1%7D%20-%20saturation_%7Bcolor_2%7D%7C)
 
 Finalmente, combinamos ambas distancias, teniendo en cuenta que el máximo de la distancia entre *hue* va a ser 180º y la de saturación 255:
 
