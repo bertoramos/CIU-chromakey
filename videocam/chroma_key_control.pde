@@ -62,7 +62,7 @@ void draw_chroma(PImage orig_image, PImage bg_img, color key_color)
   fill(255);
   
   if(distance_mode == HSB_DISTANCE_MODE) fill(255, 0, 0);
-  text("[2 - HSB mode]", width - 150, height-10);
+  text("[2 - HSB mode]", width - 140, height-10);
   fill(255);
 }
 
