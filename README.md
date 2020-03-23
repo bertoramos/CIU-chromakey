@@ -36,7 +36,7 @@ Como vemos las zonas donde la máscara es blanca, tomamos el color de la imagen 
 
 Para crear la cáscara, aplicamos la siguiente ecuación:
 
-![Máscara](https://latex.codecogs.com/gif.latex?m%28j%2Ck%29%3D%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%201%20%26%20if%20d%28j%2Ck%29%3Et_2%20%5C%5C%200%20%26%20if%20d%28j%2Ck%29%3Ct_1%20%5C%5C%20%5Cfrac%7Bd%5E2%20%28j%2Ck%29-t_1%5E2%7D%7Bt_2%5E2-t_1%5E2%7D%20%26%20if%20t_1%3Cd%28j%2Ck%29%3Ct_2%20%5Cend%7Bmatrix%7D%5Cright.)
+![Máscara](mask_ec.JPG)
 
 Los valores *t1* y *t2*, son dos umbrales elegidos a mano por el usuario.
 
@@ -56,7 +56,7 @@ Finalmente, la distancia entre dos colores en YCbCr está definida por:
 
 ##### Distancia entre colores en el espacio de color HSV
 
-Buscando una mejora, pasamos a otro espacio de colores donde medir las distancias :*HSV*. La utilización de este espacio de colores supone una mejora frente a YCbCr, pues soluciona ciertos errores producidos con reflejos y colores blancos.
+Buscando una mejora, pasamos a otro espacio de colores donde medir las distancias *HSV*. La utilización de este espacio de colores supone una mejora frente a YCbCr, pues soluciona ciertos errores producidos con reflejos y colores blancos.
 
 Processing permite la transformación mediante las funciones *hue, saturation y brightness*. La medida de distancia entre colores es solo aplicada a la saturación y matiz, pues considerando que el valor está al 100% podemos diferenciar los colores. Para medir las distancias, hay que considerar que el matiz tiene un valor angular, donde los 0º y 359º son cercanos.
 La distancia, entre matices de dos colores, por tanto viene definida por:
@@ -65,7 +65,7 @@ La distancia, entre matices de dos colores, por tanto viene definida por:
 
 La distancia entre saturaciones, al no ser circular, se calcula como:
 
-![Distancia saturation](https://latex.codecogs.com/gif.latex?dist_%7Bsaturation%7D%20%3D%20%7Csaturation_%7Bcolor_1%7D%20-%20saturation_%7Bcolor_2%7D%7C)
+![Distancia saturation](sat_ec.JPG)
 
 Finalmente, combinamos ambas distancias, teniendo en cuenta que el máximo de la distancia entre *hue* va a ser 180º y la de saturación 255:
 
